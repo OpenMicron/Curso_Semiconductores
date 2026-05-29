@@ -1,0 +1,14 @@
+** sch_path: /foss/designs/micron/micron_stdcells/3_OAI1X.sch
+.subckt 3_OAI1X A Y B C
+*.PININFO A:I B:I Y:O C:I
+XM1 net2 A VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
+XM3 net2 B net1 VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
+XM4 net3 net2 VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
+XM6 net3 net2 VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
+XM7 Y net3 VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
+XM8 Y C VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
+XM9 Y net3 net4 VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=2
+XM10 net4 C VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=2
+XM5 net2 B VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
+XM2 net1 A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
+.ends

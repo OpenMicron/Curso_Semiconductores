@@ -1,0 +1,12 @@
+** sch_path: /foss/designs/micron/micron_stdcells/4_nor1X.sch
+.subckt 4_nor1X A B C D Y
+*.PININFO A:I B:I C:I Y:O D:I
+XM2 net1 A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=2
+XM1 Y A VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
+XM5 Y B VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
+XM6 Y C VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
+XM7 Y D VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
+XM3 net2 B net1 VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=2
+XM4 net3 C net2 VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=2
+XM8 Y D net3 VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=2
+.ends
