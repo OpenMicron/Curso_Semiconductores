@@ -1,2 +1,2 @@
-# Curso_IPN
-Contenido del curso de verano en semiconductores para el IPN.
+# Curso de semiconductores IPN/CINVESTAV
+Contenido del curso de verano en semiconductores.
