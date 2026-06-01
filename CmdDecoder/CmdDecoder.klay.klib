@@ -3,27 +3,27 @@
     "statements": [
         {
             "lib_name": "inv1X",
-            "lib_path": "inv1X"
+            "lib_path": "/foss/designs/Curso_Semiconductores/inv1X/inv1X.gds"
         },
         {
             "lib_name": "4_nor1X",
-            "lib_path": "4_nor1X.lay"
+            "lib_path": "/foss/designs/Curso_Semiconductores/4_nor1X/4_nor1X.gds"
         },
         {
             "lib_name": "3_OAI1X",
-            "lib_path": "3_OAI1X.lay"
+            "lib_path": "/foss/designs/Curso_Semiconductores/3_OAI1X/3_OAI1X.gds"
         },
         {
             "lib_name": "3_nor1X",
-            "lib_path": "3_nor1X.lay"
+            "lib_path": "/foss/designs/Curso_Semiconductores/3_nor1X/3_nor1X.gds"
         },
         {
             "lib_name": "3_nand1X",
-            "lib_path": "3_nand1X.lay"
+            "lib_path": "/foss/designs/Curso_Semiconductores/3_nand1X/3_nand1X.gds"
         },
         {
             "lib_name": "2_nor1X",
-            "lib_path": "2_nor1X.lay"
+            "lib_path": "/foss/designs/Curso_Semiconductores/2_nor1X/2_nor1X.gds"
         }
     ]
 }

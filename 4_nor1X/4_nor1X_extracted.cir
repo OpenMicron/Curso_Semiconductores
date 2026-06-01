@@ -1,25 +1,25 @@
-* Extracted by KLayout with SKY130 LVS runset on : 29/05/2026 21:34
+* Extracted by KLayout with SKY130 LVS runset on : 01/06/2026 19:41
 
 * cell 4_nor1X
+* pin VSS!
 * pin Y
 * pin VDD!
 * pin A
 * pin B
 * pin C
 * pin D
-* pin VSS!
-.SUBCKT 4_nor1X Y VDD! A B C D VSS!
+.SUBCKT 4_nor1X VSS! Y VDD! A B C D
 * device instance $1 r0 *1 11.66,2.16 sky130_fd_pr__pfet_01v8
-XM$1 \$23 C \$22 VDD! sky130_fd_pr__pfet_01v8 L=150000 W=1680000
+XM$1 \$20 C \$19 VDD! sky130_fd_pr__pfet_01v8 L=150000 W=1680000
 + AS=378000000000 AD=252000000000 PS=3420000 PD=2280000
 * device instance $3 r0 *1 12.56,2.16 sky130_fd_pr__pfet_01v8
-XM$3 \$23 D Y VDD! sky130_fd_pr__pfet_01v8 L=150000 W=1680000 AS=252000000000
+XM$3 \$20 D Y VDD! sky130_fd_pr__pfet_01v8 L=150000 W=1680000 AS=252000000000
 + AD=378000000000 PS=2280000 PD=3420000
 * device instance $5 r0 *1 9.29,2.16 sky130_fd_pr__pfet_01v8
-XM$5 \$20 A VDD! VDD! sky130_fd_pr__pfet_01v8 L=150000 W=1680000
+XM$5 \$17 A VDD! VDD! sky130_fd_pr__pfet_01v8 L=150000 W=1680000
 + AS=378000000000 AD=252000000000 PS=3420000 PD=2280000
 * device instance $7 r0 *1 10.19,2.16 sky130_fd_pr__pfet_01v8
-XM$7 \$20 B \$22 VDD! sky130_fd_pr__pfet_01v8 L=150000 W=1680000
+XM$7 \$17 B \$19 VDD! sky130_fd_pr__pfet_01v8 L=150000 W=1680000
 + AS=252000000000 AD=378000000000 PS=2280000 PD=3420000
 * device instance $9 r0 *1 12.785,-0.17 sky130_fd_pr__nfet_01v8
 XM$9 Y D VSS! VSS! sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=126000000000

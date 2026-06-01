@@ -1,11 +1,11 @@
-* Extracted by KLayout with SKY130 LVS runset on : 29/05/2026 05:02
+* Extracted by KLayout with SKY130 LVS runset on : 01/06/2026 19:42
 
 * cell inv1X
 * pin VDD!
 * pin Y
-* pin A
 * pin VSS!
-.SUBCKT inv1X VDD! Y A VSS!
+* pin A
+.SUBCKT inv1X VDD! Y VSS! A
 * device instance $1 r0 *1 0.5,1.13 sky130_fd_pr__pfet_01v8
 XM$1 VDD! A Y VDD! sky130_fd_pr__pfet_01v8 L=150000 W=840000 AS=252000000000
 + AD=252000000000 PS=2280000 PD=2280000
