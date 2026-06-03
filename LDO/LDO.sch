@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
@@ -38,7 +38,6 @@ N 290 -505 290 -440 {lab=IBias}
 N 100 -505 290 -505 {lab=IBias}
 N 300 -310 300 -280 {lab=VSS}
 N 270 -280 300 -280 {lab=VSS}
-C {OTA_5T.sym} 300 -380 0 0 {name=x1}
 C {sky130_fd_pr/pfet_01v8.sym} 570 -380 0 0 {name=M7
 W=6
 L=0.15
@@ -53,7 +52,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {RES_FB.sym} 590 -90 0 0 {name=x2}
 C {iopin.sym} 100 -540 2 0 {name=p1 lab=VIN}
 C {iopin.sym} 100 -410 2 0 {name=p2 lab=VREF}
 C {iopin.sym} 130 -200 2 0 {name=p3 lab=VFB1}
@@ -64,3 +62,5 @@ C {iopin.sym} 790 -280 0 0 {name=p6 lab=VOUT}
 C {iopin.sym} 100 -505 2 0 {name=p7 lab=IBias}
 C {lab_wire.sym} 270 -280 0 0 {name=p8 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 475 -380 0 0 {name=p9 sig_type=std_logic lab=Vgate}
+C {/foss/designs/Curso_Semiconductores/OTA_5T/OTA_5T.sym} 300 -380 0 0 {name=x1}
+C {/foss/designs/Curso_Semiconductores/RES_FB/RES_FB.sym} 590 -90 0 0 {name=x2}
