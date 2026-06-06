@@ -13,10 +13,10 @@ N -120 120 -120 130 {lab=Y}
 N -120 120 90 120 {lab=Y}
 N 90 120 90 130 {lab=Y}
 N -20 120 -20 130 {lab=Y}
-N -120 190 -120 200 {lab=VSS!}
-N -120 200 90 200 {lab=VSS!}
-N 90 190 90 200 {lab=VSS!}
-N -20 190 -20 200 {lab=VSS!}
+N -120 190 -120 200 {lab=VDD!}
+N -120 200 90 200 {lab=VDD!}
+N 90 190 90 200 {lab=VDD!}
+N -20 190 -20 200 {lab=VDD!}
 N 0 -270 0 -220 {lab=VDD!}
 N 0 -190 10 -190 {lab=VDD!}
 N 10 -230 10 -190 {lab=VDD!}
@@ -25,13 +25,13 @@ N 0 -110 10 -110 {lab=VDD!}
 N 10 -190 10 -110 {lab=VDD!}
 N 0 -30 10 -30 {lab=VDD!}
 N 10 -110 10 -30 {lab=VDD!}
-N -120 160 -100 160 {lab=VSS!}
-N -100 160 -100 200 {lab=VSS!}
-N -20 160 0 160 {lab=VSS!}
-N 0 160 0 200 {lab=VSS!}
-N 90 160 110 160 {lab=VSS!}
-N 110 160 110 200 {lab=VSS!}
-N 90 200 110 200 {lab=VSS!}
+N -120 160 -100 160 {lab=VDD!}
+N -100 160 -100 200 {lab=VDD!}
+N -20 160 0 160 {lab=VDD!}
+N 0 160 0 200 {lab=VDD!}
+N 90 160 110 160 {lab=VDD!}
+N 110 160 110 200 {lab=VDD!}
+N 90 200 110 200 {lab=VDD!}
 N -60 -190 -40 -190 {lab=A}
 N -60 -110 -40 -110 {lab=B}
 N -60 -30 -40 -30 {lab=C}
@@ -40,11 +40,11 @@ N -70 160 -60 160 {lab=B}
 N 40 160 50 160 {lab=C}
 N 200 120 200 130 {lab=Y}
 N 90 120 200 120 {lab=Y}
-N 200 190 200 200 {lab=VSS!}
-N 110 200 200 200 {lab=VSS!}
-N 200 160 210 160 {lab=VSS!}
-N 210 160 210 200 {lab=VSS!}
-N 200 200 210 200 {lab=VSS!}
+N 200 190 200 200 {lab=VDD!}
+N 110 200 200 200 {lab=VDD!}
+N 200 160 210 160 {lab=VDD!}
+N 210 160 210 200 {lab=VDD!}
+N 200 200 210 200 {lab=VDD!}
 N -0 0 -0 20 {lab=#net3}
 N -0 50 10 50 {lab=VDD!}
 N 10 -30 10 50 {lab=VDD!}
@@ -118,8 +118,6 @@ C {lab_wire.sym} -170 160 0 0 {name=p7 sig_type=std_logic lab=A}
 C {lab_wire.sym} -70 160 0 0 {name=p8 sig_type=std_logic lab=B}
 C {lab_wire.sym} 40 160 0 0 {name=p9 sig_type=std_logic lab=C}
 C {opin.sym} 250 120 0 0 {name=p11 lab=Y}
-C {lab_wire.sym} -50 200 0 0 {name=p10 sig_type=std_logic lab=VSS!}
-C {lab_wire.sym} 0 -270 0 0 {name=p12 sig_type=std_logic lab=VDD!}
 C {sky130_fd_pr/nfet_01v8.sym} 180 160 0 0 {name=M7
 W=0.42
 L=0.15
@@ -179,3 +177,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
+C {iopin.sym} 0 -270 0 0 {name=p10 lab=VDD!}
+C {iopin.sym} 210 200 0 0 {name=p12 lab=VSS!}

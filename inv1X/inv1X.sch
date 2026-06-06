@@ -14,12 +14,12 @@ N 60 -70 60 -40 {lab=VDD!}
 N 60 -90 60 -70 {lab=VDD!}
 N 40 -90 60 -90 {lab=VDD!}
 N 40 -90 40 -70 {lab=VDD!}
-N 40 70 60 70 {lab=VSS!}
-N 60 70 60 130 {lab=VSS!}
-N 40 130 60 130 {lab=VSS!}
-N 40 100 40 130 {lab=VSS!}
+N 40 70 60 70 {lab=xxx}
+N 60 70 60 130 {lab=xxx}
+N 40 130 60 130 {lab=xxx}
+N 40 100 40 130 {lab=xxx}
 N 40 -110 40 -90 {lab=VDD!}
-N 40 130 40 150 {lab=VSS!}
+N 40 130 40 150 {lab=xxx}
 N -40 20 -30 20 {lab=A}
 N 40 20 60 20 {lab=Y}
 C {sky130_fd_pr/nfet_01v8.sym} 20 70 0 0 {name=M1
@@ -52,5 +52,5 @@ spiceprefix=X
 }
 C {ipin.sym} -40 20 0 0 {name=p3 lab=A}
 C {opin.sym} 60 20 0 0 {name=p4 lab=Y}
-C {lab_wire.sym} 40 -110 0 0 {name=p2 sig_type=std_logic lab=VDD!}
-C {lab_wire.sym} 40 150 0 0 {name=p5 sig_type=std_logic lab=VSS!}
+C {iopin.sym} 40 -110 0 0 {name=p1 lab=VDD!}
+C {iopin.sym} 40 150 0 0 {name=p2 lab=VSS!}

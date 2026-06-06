@@ -11,28 +11,28 @@ N 0 -15 0 -5 {lab=#net1}
 N 0 55 0 75 {lab=Y}
 N -50 100 -50 110 {lab=Y}
 N 50 100 50 110 {lab=Y}
-N -50 170 -50 180 {lab=VSS!}
-N 50 170 50 180 {lab=VSS!}
+N -50 170 -50 180 {lab=VDD!}
+N 50 170 50 180 {lab=VDD!}
 N 0 -135 0 -85 {lab=VDD!}
 N 0 -55 10 -55 {lab=VDD!}
 N 10 -95 10 -55 {lab=VDD!}
 N 0 -95 10 -95 {lab=VDD!}
 N 0 25 10 25 {lab=VDD!}
 N 10 -55 10 25 {lab=VDD!}
-N -50 140 -30 140 {lab=VSS!}
-N -30 140 -30 180 {lab=VSS!}
-N 50 140 70 140 {lab=VSS!}
-N 70 140 70 180 {lab=VSS!}
+N -50 140 -30 140 {lab=VDD!}
+N -30 140 -30 180 {lab=VDD!}
+N 50 140 70 140 {lab=VDD!}
+N 70 140 70 180 {lab=VDD!}
 N -60 -55 -40 -55 {lab=A}
 N -60 25 -40 25 {lab=B}
 N -100 140 -90 140 {lab=A}
 N 0 140 10 140 {lab=B}
-N -50 195 70 195 {lab=VSS!}
-N 70 185 70 195 {lab=VSS!}
-N -50 180 -50 195 {lab=VSS!}
-N -30 180 -30 195 {lab=VSS!}
-N 50 180 50 195 {lab=VSS!}
-N 70 180 70 185 {lab=VSS!}
+N -50 195 70 195 {lab=VDD!}
+N 70 185 70 195 {lab=VDD!}
+N -50 180 -50 195 {lab=VDD!}
+N -30 180 -30 195 {lab=VDD!}
+N 50 180 50 195 {lab=VDD!}
+N 70 180 70 185 {lab=VDD!}
 N -50 100 50 100 {lab=Y}
 N 0 75 0 100 {lab=Y}
 N 45 100 165 100 {lab=Y}
@@ -71,8 +71,6 @@ C {lab_wire.sym} -50 25 0 0 {name=p5 sig_type=std_logic lab=B}
 C {lab_wire.sym} -100 140 0 0 {name=p7 sig_type=std_logic lab=A}
 C {lab_wire.sym} 0 140 0 0 {name=p8 sig_type=std_logic lab=B}
 C {opin.sym} 165 100 0 0 {name=p11 lab=Y}
-C {lab_wire.sym} 20 195 0 0 {name=p10 sig_type=std_logic lab=VSS!}
-C {lab_wire.sym} 0 -135 0 0 {name=p12 sig_type=std_logic lab=VDD!}
 C {sky130_fd_pr/nfet_01v8.sym} -70 140 0 0 {name=M1
 W=0.42
 L=0.15
@@ -101,3 +99,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
+C {iopin.sym} 0 -130 0 0 {name=p3 lab=VDD!}
+C {iopin.sym} 70 190 0 0 {name=p6 lab=VSS!}

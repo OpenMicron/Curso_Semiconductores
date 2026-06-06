@@ -1,0 +1,14 @@
+* Extracted by KLayout with SKY130 LVS runset on : 05/06/2026 18:49
+
+* cell RES_FB
+* pin VOUT
+* pin VFB
+* pin VSS
+.SUBCKT RES_FB VOUT VFB VSS
+* device instance $1 r0 *1 17.5,7.245 sky130_fd_pr__res_xhigh_po_0p69
+XR$1 VOUT VFB VSS sky130_fd_pr__res_xhigh_po_0p69 R=49971.0144928 L=17240000
++ W=690000 A=1.18956e+13 P=37240000
+* device instance $8 r0 *1 10.22,7.245 sky130_fd_pr__res_xhigh_po_0p69
+XR$8 VFB VSS VSS sky130_fd_pr__res_xhigh_po_0p69 R=199884.057971 L=68960000
++ W=690000 A=4.75824e+13 P=148960000
+.ENDS RES_FB

@@ -1,19 +1,20 @@
-** sch_path: /foss/designs/micron/micron_stdcells/CmdDecoder.sch
-.subckt CmdDecoder CA<0> PDNF CA<2> CA<3> CA<1> CA<4> CS_CmdDecode stopDec<2> stopDec<1> stopDec<0> Stop2cDec Cmd
+** sch_path: /foss/designs/Curso_Semiconductores/CmdDecoder/CmdDecoder.sch
+.subckt CmdDecoder CA<0> PDNF CA<2> CA<3> CA<1> CA<4> CS_CmdDecode stopDec<2> stopDec<1> stopDec<0> Stop2cDec Cmd VSS! VDD!
 *.PININFO CA<0>:I PDNF:I CA<2>:I CA<3>:I CA<1>:I CA<4>:I CS_CmdDecode:I stopDec<2>:I stopDec<1>:I stopDec<0>:I Stop2cDec:I Cmd:O
-x1 CA<0> net1 CA<2> PDNF 3_OAI1X
-x2 CA<3> CA<1> CA<4> CS_CmdDecode net4 4_nor1X
-x3 stopDec<2> stopDec<1> stopDec<0> net2 3_nor1X
-x4 net5 Stop2cDec inv1X
-x5 net3 net5 Cmd 2_nor1X
-x6 net1 net4 net2 net3 3_nand1X
+*+ VSS!:B VDD!:B
+x1 CA<0> net1 CA<2> PDNF VDD! VSS! 3_OAI1X
+x2 CA<3> CA<1> CA<4> CS_CmdDecode net4 VDD! VSS! 4_nor1X
+x6 net1 net2 net4 net3 VDD! VSS! 3_nand1X
+x3 stopDec<2> stopDec<1> stopDec<0> net2 VDD! VSS! 3_nor1X
+x4 net5 Stop2cDec VDD! VSS! inv1X
+x5 net5 net3 Cmd VDD! VSS! 2_nor1X
 .ends
 
-* expanding   symbol:  /foss/designs/micron/micron_stdcells/3_OAI1X.sym # of pins=4
-** sym_path: /foss/designs/micron/micron_stdcells/3_OAI1X.sym
-** sch_path: /foss/designs/micron/micron_stdcells/3_OAI1X.sch
-.subckt 3_OAI1X A Y B C
-*.PININFO A:I B:I Y:O C:I
+* expanding   symbol:  /foss/designs/Curso_Semiconductores/3_OAI1X/3_OAI1X.sym # of pins=6
+** sym_path: /foss/designs/Curso_Semiconductores/3_OAI1X/3_OAI1X.sym
+** sch_path: /foss/designs/Curso_Semiconductores/3_OAI1X/3_OAI1X.sch
+.subckt 3_OAI1X A Y B C VDD! VSS!
+*.PININFO A:I B:I Y:O C:I VDD!:B VSS!:B
 XM1 net2 A VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
 XM3 net2 B net1 VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
 XM4 net3 net2 VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
@@ -27,11 +28,11 @@ XM2 net1 A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
 .ends
 
 
-* expanding   symbol:  /foss/designs/micron/micron_stdcells/4_nor1X.sym # of pins=5
-** sym_path: /foss/designs/micron/micron_stdcells/4_nor1X.sym
-** sch_path: /foss/designs/micron/micron_stdcells/4_nor1X.sch
-.subckt 4_nor1X A B C D Y
-*.PININFO A:I B:I C:I Y:O D:I
+* expanding   symbol:  /foss/designs/Curso_Semiconductores/4_nor1X/4_nor1X.sym # of pins=7
+** sym_path: /foss/designs/Curso_Semiconductores/4_nor1X/4_nor1X.sym
+** sch_path: /foss/designs/Curso_Semiconductores/4_nor1X/4_nor1X.sch
+.subckt 4_nor1X A B C D Y VDD! VSS!
+*.PININFO A:I B:I C:I Y:O D:I VDD!:B VSS!:B
 XM2 net1 A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=2
 XM1 Y A VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
 XM5 Y B VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
@@ -43,11 +44,25 @@ XM8 Y D net3 VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=2
 .ends
 
 
-* expanding   symbol:  /foss/designs/micron/micron_stdcells/3_nor1X.sym # of pins=4
-** sym_path: /foss/designs/micron/micron_stdcells/3_nor1X.sym
-** sch_path: /foss/designs/micron/micron_stdcells/3_nor1X.sch
-.subckt 3_nor1X A B C Y
-*.PININFO A:I B:I C:I Y:O
+* expanding   symbol:  /foss/designs/Curso_Semiconductores/3_nand1X/3_nand1X.sym # of pins=6
+** sym_path: /foss/designs/Curso_Semiconductores/3_nand1X/3_nand1X.sym
+** sch_path: /foss/designs/Curso_Semiconductores/3_nand1X/3_nand1X.sch
+.subckt 3_nand1X A C B Y VDD! VSS!
+*.PININFO A:I B:I C:I Y:O VDD!:B VSS!:B
+XM1 Y A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.63 nf=1 m=2
+XM2 Y A net1 VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
+XM5 net1 B net2 VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
+XM6 net2 C VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
+XM3 Y B VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.63 nf=1 m=2
+XM4 Y C VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.63 nf=1 m=2
+.ends
+
+
+* expanding   symbol:  /foss/designs/Curso_Semiconductores/3_nor1X/3_nor1X.sym # of pins=6
+** sym_path: /foss/designs/Curso_Semiconductores/3_nor1X/3_nor1X.sym
+** sch_path: /foss/designs/Curso_Semiconductores/3_nor1X/3_nor1X.sch
+.subckt 3_nor1X A B C Y VDD! VSS!
+*.PININFO A:I B:I C:I Y:O VDD!:B VSS!:B
 XM2 net1 A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=3
 XM1 Y A VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
 XM5 Y B VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
@@ -57,38 +72,24 @@ XM4 Y C net2 VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=3
 .ends
 
 
-* expanding   symbol:  /foss/designs/micron/micron_stdcells/inv1X.sym # of pins=2
-** sym_path: /foss/designs/micron/micron_stdcells/inv1X.sym
-** sch_path: /foss/designs/micron/micron_stdcells/inv1X.sch
-.subckt inv1X Y A
-*.PININFO A:I Y:O
+* expanding   symbol:  /foss/designs/Curso_Semiconductores/inv1X/inv1X.sym # of pins=4
+** sym_path: /foss/designs/Curso_Semiconductores/inv1X/inv1X.sym
+** sch_path: /foss/designs/Curso_Semiconductores/inv1X/inv1X.sch
+.subckt inv1X Y A VDD! VSS!
+*.PININFO A:I Y:O VDD!:B VSS!:B
 XM1 Y A VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
 XM2 Y A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
 .ends
 
 
-* expanding   symbol:  /foss/designs/micron/micron_stdcells/2_nor1X.sym # of pins=3
-** sym_path: /foss/designs/micron/micron_stdcells/2_nor1X.sym
-** sch_path: /foss/designs/micron/micron_stdcells/2_nor1X.sch
-.subckt 2_nor1X A B Y
-*.PININFO A:I B:I Y:O
+* expanding   symbol:  /foss/designs/Curso_Semiconductores/2_nor1X/2_nor1X.sym # of pins=5
+** sym_path: /foss/designs/Curso_Semiconductores/2_nor1X/2_nor1X.sym
+** sch_path: /foss/designs/Curso_Semiconductores/2_nor1X/2_nor1X.sch
+.subckt 2_nor1X A B Y VDD! VSS!
+*.PININFO A:I B:I Y:O VDD!:B VSS!:B
 XM3 Y B net1 VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=2
 XM5 Y B VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
 XM1 Y A VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
 XM2 net1 A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=2
-.ends
-
-
-* expanding   symbol:  /foss/designs/micron/micron_stdcells/3_nand1X.sym # of pins=4
-** sym_path: /foss/designs/micron/micron_stdcells/3_nand1X.sym
-** sch_path: /foss/designs/micron/micron_stdcells/3_nand1X.sch
-.subckt 3_nand1X A C B Y
-*.PININFO A:I B:I C:I Y:O
-XM1 Y A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.63 nf=1 m=2
-XM2 Y A net1 VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
-XM5 net1 B net2 VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
-XM6 net2 C VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
-XM3 Y B VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.63 nf=1 m=2
-XM4 Y C VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.63 nf=1 m=2
 .ends
 

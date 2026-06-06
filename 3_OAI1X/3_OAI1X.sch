@@ -13,12 +13,12 @@ N -110 22.5 -110 32.5 {lab=#net2}
 N -10 22.5 -10 32.5 {lab=#net2}
 N -110 92.5 -110 102.5 {lab=VSS!}
 N -10 92.5 -10 102.5 {lab=VSS!}
-N -60 -212.5 -60 -162.5 {lab=VDD!}
-N -60 -132.5 -50 -132.5 {lab=VDD!}
-N -50 -172.5 -50 -132.5 {lab=VDD!}
-N -60 -172.5 -50 -172.5 {lab=VDD!}
-N -60 -52.5 -50 -52.5 {lab=VDD!}
-N -50 -132.5 -50 -52.5 {lab=VDD!}
+N -60 -212.5 -60 -162.5 {lab=xxx}
+N -60 -132.5 -50 -132.5 {lab=xxx}
+N -50 -172.5 -50 -132.5 {lab=xxx}
+N -60 -172.5 -50 -172.5 {lab=xxx}
+N -60 -52.5 -50 -52.5 {lab=xxx}
+N -50 -132.5 -50 -52.5 {lab=xxx}
 N -110 62.5 -90 62.5 {lab=VSS!}
 N -90 62.5 -90 102.5 {lab=VSS!}
 N -10 62.5 10 62.5 {lab=VSS!}
@@ -40,9 +40,9 @@ N 110 115 120 115 {lab=VSS!}
 N 120 -37.5 127.5 -37.5 {lab=VSS!}
 N 127.5 -37.5 127.5 15 {lab=VSS!}
 N 120 15 127.5 15 {lab=VSS!}
-N 117.5 -142.5 130 -142.5 {lab=VDD!}
-N 130 -187.5 130 -142.5 {lab=VDD!}
-N 120 -187.5 130 -187.5 {lab=VDD!}
+N 117.5 -142.5 130 -142.5 {lab=xxx}
+N 130 -187.5 130 -142.5 {lab=xxx}
+N 120 -187.5 130 -187.5 {lab=xxx}
 N 65 -37.5 80 -37.5 {lab=#net2}
 N 65 -142.5 65 -37.5 {lab=#net2}
 N 65 -142.5 80 -142.5 {lab=#net2}
@@ -54,12 +54,12 @@ N 120 -90 220 -90 {lab=#net3}
 N 305 -125 305 -115 {lab=Y}
 N 410 -127.5 410 -115 {lab=Y}
 N 305 -115 410 -115 {lab=Y}
-N 302.5 -195 410 -195 {lab=VDD!}
-N 302.5 -155 317.5 -155 {lab=VDD!}
-N 317.5 -195 317.5 -155 {lab=VDD!}
-N 410 -157.5 417.5 -157.5 {lab=VDD!}
-N 417.5 -195 417.5 -157.5 {lab=VDD!}
-N 410 -195 417.5 -195 {lab=VDD!}
+N 302.5 -195 410 -195 {lab=xxx}
+N 302.5 -155 317.5 -155 {lab=xxx}
+N 317.5 -195 317.5 -155 {lab=xxx}
+N 410 -157.5 417.5 -157.5 {lab=xxx}
+N 417.5 -195 417.5 -157.5 {lab=xxx}
+N 410 -195 417.5 -195 {lab=xxx}
 N 362.5 70 362.5 115 {lab=VSS!}
 N 120 115 362.5 115 {lab=VSS!}
 N 360 40 370 40 {lab=VSS!}
@@ -72,15 +72,15 @@ N 220 -155 265 -155 {lab=#net3}
 N 220 -47.5 322.5 -47.5 {lab=#net3}
 N 220 -90 220 -47.5 {lab=#net3}
 N 410 -115 452.5 -115 {lab=Y}
-N 130 -195 302.5 -195 {lab=VDD!}
-N 130 -195 130 -187.5 {lab=VDD!}
+N 130 -195 302.5 -195 {lab=xxx}
+N 130 -195 130 -187.5 {lab=xxx}
 N 360 -47.5 370 -47.5 {lab=VSS!}
 N 370 -47.5 370 40 {lab=VSS!}
 N 362.5 -17.5 362.5 10 {lab=#net4}
-N -60 -195 130 -195 {lab=VDD!}
-N 120 -187.5 120 -172.5 {lab=VDD!}
-N 305 -195 305 -185 {lab=VDD!}
-N 410 -195 410 -187.5 {lab=VDD!}
+N -60 -195 130 -195 {lab=xxx}
+N 120 -187.5 120 -172.5 {lab=xxx}
+N 305 -195 305 -185 {lab=xxx}
+N 410 -195 410 -187.5 {lab=xxx}
 N 362.5 -115 362.5 -77.5 {lab=Y}
 N 120 15 120 112.5 {lab=VSS!}
 N 120 112.5 120 115 {lab=VSS!}
@@ -122,8 +122,6 @@ C {lab_wire.sym} -110 -52.5 0 0 {name=p5 sig_type=std_logic lab=B}
 C {lab_wire.sym} -160 62.5 0 0 {name=p7 sig_type=std_logic lab=A}
 C {lab_wire.sym} -60 62.5 0 0 {name=p8 sig_type=std_logic lab=B}
 C {opin.sym} 452.5 -115 0 0 {name=p11 lab=Y}
-C {lab_wire.sym} -40 117.5 0 0 {name=p10 sig_type=std_logic lab=VSS!}
-C {lab_wire.sym} -60 -212.5 0 0 {name=p12 sig_type=std_logic lab=VDD!}
 C {sky130_fd_pr/pfet_01v8.sym} 100 -142.5 0 0 {name=M4
 W=0.84
 L=0.15
@@ -239,3 +237,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
+C {iopin.sym} -60 -210 0 0 {name=p3 lab=VDD!}
+C {iopin.sym} 370 110 0 0 {name=p12 lab=VSS!}

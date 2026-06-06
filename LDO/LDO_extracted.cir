@@ -1,0 +1,68 @@
+* Extracted by KLayout with SKY130 LVS runset on : 06/06/2026 00:32
+
+* cell LDO
+* pin IB
+* pin VSS
+* pin VFB1
+* pin VREF
+* pin VOUT
+* pin VIN
+* pin VFB2
+.SUBCKT LDO IB VSS VFB1 VREF VOUT VIN VFB2
+* cell instance $1 r0 *1 -11.21,0.04
+X$1 \$9 IB VSS VFB1 VREF VIN OTA_5T
+* cell instance $4 r0 *1 -6.1,1.92
+X$4 VOUT VFB2 VSS RES_FB
+* device instance $1 r0 *1 16.29,5.6 sky130_fd_pr__pfet_01v8
+XM$1 VIN \$9 VOUT VIN sky130_fd_pr__pfet_01v8 L=150000 W=300000000 AS=7.56e+13
++ AD=7.56e+13 PS=337200000 PD=337200000
+* device instance $51 r0 *1 6.66,-3.48 sky130_fd_pr__model__cap_mim
+XC$51 \$9 VOUT sky130_fd_pr__model__cap_mim C=0.2 A=1e+14 P=40000000
+.ENDS LDO
+
+* cell RES_FB
+* pin VOUT
+* pin VFB
+* pin VSS
+.SUBCKT RES_FB VOUT VFB VSS
+* device instance $1 r0 *1 17.5,7.245 sky130_fd_pr__res_xhigh_po_0p69
+XR$1 VOUT VFB VSS sky130_fd_pr__res_xhigh_po_0p69 R=49971.0144928 L=17240000
++ W=690000 A=1.18956e+13 P=37240000
+* device instance $8 r0 *1 10.22,7.245 sky130_fd_pr__res_xhigh_po_0p69
+XR$8 VFB VSS VSS sky130_fd_pr__res_xhigh_po_0p69 R=199884.057971 L=68960000
++ W=690000 A=4.75824e+13 P=148960000
+.ENDS RES_FB
+
+* cell OTA_5T
+* pin VOUT_AMP
+* pin IB
+* pin VSS
+* pin VINP
+* pin VINN
+* pin VIN
+.SUBCKT OTA_5T VOUT_AMP IB VSS VINP VINN VIN
+* device instance $1 r0 *1 3.39,5.68 sky130_fd_pr__pfet_01v8
+XM$1 VIN VIN VIN VIN sky130_fd_pr__pfet_01v8 L=150000 W=24000000 AS=7.2e+12
++ AD=7.2e+12 PS=50400000 PD=50400000
+* device instance $2 r0 *1 -1.955,5.68 sky130_fd_pr__pfet_01v8
+XM$2 VOUT_AMP \$5 VIN VIN sky130_fd_pr__pfet_01v8 L=1000000 W=24000000
++ AS=5.4e+12 AD=5.4e+12 PS=37800000 PD=37800000
+* device instance $3 r0 *1 -0.655,5.68 sky130_fd_pr__pfet_01v8
+XM$3 VIN \$5 \$5 VIN sky130_fd_pr__pfet_01v8 L=1000000 W=24000000 AS=3.6e+12
++ AD=3.6e+12 PS=25200000 PD=25200000
+* device instance $13 r0 *1 1.18,-1.38 sky130_fd_pr__nfet_01v8
+XM$13 \$5 VINP \$1 VSS sky130_fd_pr__nfet_01v8 L=1000000 W=12000000 AS=2.7e+12
++ AD=2.7e+12 PS=19800000 PD=19800000
+* device instance $14 r0 *1 2.48,-1.38 sky130_fd_pr__nfet_01v8
+XM$14 \$1 VINN VOUT_AMP VSS sky130_fd_pr__nfet_01v8 L=1000000 W=12000000
++ AS=1.8e+12 AD=1.8e+12 PS=13200000 PD=13200000
+* device instance $17 r0 *1 6.525,-5.11 sky130_fd_pr__nfet_01v8
+XM$17 \$1 VSS \$1 VSS sky130_fd_pr__nfet_01v8 L=150000 W=12000000 AS=3.6e+12
++ AD=3.6e+12 PS=26400000 PD=26400000
+* device instance $19 r0 *1 -3.01,-4.86 sky130_fd_pr__nfet_01v8
+XM$19 IB IB VSS VSS sky130_fd_pr__nfet_01v8 L=1000000 W=10000000 AS=2.25e+12
++ AD=2.25e+12 PS=16800000 PD=16800000
+* device instance $20 r0 *1 -1.71,-4.86 sky130_fd_pr__nfet_01v8
+XM$20 VSS IB \$1 VSS sky130_fd_pr__nfet_01v8 L=1000000 W=10000000 AS=2.25e+12
++ AD=2.25e+12 PS=16800000 PD=16800000
+.ENDS OTA_5T

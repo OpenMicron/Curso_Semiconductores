@@ -1,6 +1,6 @@
-** sch_path: /foss/designs/micron/micron_stdcells/inv1X.sch
-.subckt inv1X Y A
-*.PININFO A:I Y:O
+** sch_path: /foss/designs/Curso_Semiconductores/inv1X/inv1X.sch
+.subckt inv1X Y A VDD! VSS!
+*.PININFO A:I Y:O VDD!:B VSS!:B
 XM1 Y A VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
 XM2 Y A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
 .ends

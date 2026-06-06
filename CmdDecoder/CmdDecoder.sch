@@ -12,9 +12,6 @@ N 220 -200 250 -200 {lab=#net2}
 N 220 -200 220 -100 {lab=#net2}
 N 380 -220 460 -220 {lab=#net3}
 N 460 -220 460 -100 {lab=#net3}
-N 460 -100 530 -100 {lab=#net3}
-N 0 0 50 0 {lab=VSS!}
-N 90 0 140 0 {lab=VDD!}
 N -20 -120 -10 -120 {lab=stopDec<2>}
 N -20 -100 -10 -100 {lab=stopDec<1>}
 N -20 -80 -10 -80 {lab=stopDec<0>}
@@ -31,16 +28,23 @@ N 215 -372.5 220 -372.5 {lab=#net1}
 N 220 -372.5 220 -370 {lab=#net1}
 N 85 -100 220 -100 {lab=#net2}
 N 115 -220 250 -220 {lab=#net4}
-N 425 -80 530 -80 {lab=#net5}
 N 330 -80 340 -80 {lab=Stop2cDec}
-C {/foss/designs/micron/micron_stdcells/3_OAI1X.sym} -10 -360 0 0 {name=x1}
-C {/foss/designs/micron/micron_stdcells/4_nor1X.sym} -10 -190 0 0 {name=x2}
-C {/foss/designs/micron/micron_stdcells/3_nor1X.sym} -10 -80 0 0 {name=x3}
-C {/foss/designs/micron/micron_stdcells/inv1X.sym} 340 -80 0 0 {name=x4}
-C {/foss/designs/micron/micron_stdcells/2_nor1X.sym} 530 -80 0 0 {name=x5}
-C {/foss/designs/micron/micron_stdcells/3_nand1X.sym} 250 -200 0 0 {name=x6}
-C {lab_wire.sym} 0 0 0 0 {name=p1 sig_type=std_logic lab=VSS!}
-C {lab_wire.sym} 90 0 0 0 {name=p2 sig_type=std_logic lab=VDD!}
+N 10 -0 50 0 {lab=VSS!}
+N 10 30 50 30 {lab=VDD!}
+N 50 -410 50 -400 {lab=VDD!}
+N 50 -350 50 -340 {lab=VSS!}
+N 20 -270 20 -260 {lab=VDD!}
+N 290 -270 290 -260 {lab=VDD!}
+N 370 -110 370 -100 {lab=VDD!}
+N 20 -140 20 -130 {lab=VDD!}
+N 560 -120 560 -110 {lab=VSS!}
+N 20 -180 20 -170 {lab=VSS!}
+N 290 -180 290 -170 {lab=VSS!}
+N 20 -70 20 -60 {lab=VSS!}
+N 370 -60 370 -50 {lab=VSS!}
+N 560 -70 560 -60 {lab=VDD!}
+N 460 -100 530 -100 {lab=#net3}
+N 425 -80 530 -80 {lab=#net5}
 C {ipin.sym} -30 -390 0 0 {name=p3 lab=CA<0>}
 C {ipin.sym} 0 -360 0 0 {name=p5 lab=PDNF}
 C {ipin.sym} -30 -370 0 0 {name=p4 lab=CA<2>}
@@ -53,3 +57,23 @@ C {ipin.sym} -20 -100 0 0 {name=p11 lab=stopDec<1>}
 C {ipin.sym} -20 -80 0 0 {name=p12 lab=stopDec<0>}
 C {ipin.sym} 330 -80 0 0 {name=p13 lab=Stop2cDec}
 C {opin.sym} 650 -90 0 0 {name=p14 lab=Cmd}
+C {/foss/designs/Curso_Semiconductores/3_OAI1X/3_OAI1X.sym} -10 -360 0 0 {name=x1}
+C {/foss/designs/Curso_Semiconductores/4_nor1X/4_nor1X.sym} -10 -190 0 0 {name=x2}
+C {/foss/designs/Curso_Semiconductores/3_nand1X/3_nand1X.sym} 250 -200 0 0 {name=x6}
+C {/foss/designs/Curso_Semiconductores/3_nor1X/3_nor1X.sym} -10 -80 0 0 {name=x3}
+C {/foss/designs/Curso_Semiconductores/inv1X/inv1X.sym} 340 -80 0 0 {name=x4}
+C {/foss/designs/Curso_Semiconductores/2_nor1X/2_nor1X.sym} 530 -100 2 1 {name=x5}
+C {iopin.sym} 50 0 0 0 {name=VSS! lab=VSS!}
+C {iopin.sym} 50 30 0 0 {name=VDD! lab=VDD!}
+C {lab_wire.sym} 50 -410 0 0 {name=p1 sig_type=std_logic lab=VDD!}
+C {lab_wire.sym} 50 -340 0 0 {name=p2 sig_type=std_logic lab=VSS!}
+C {lab_wire.sym} 20 -270 0 0 {name=p15 sig_type=std_logic lab=VDD!}
+C {lab_wire.sym} 290 -270 0 0 {name=p16 sig_type=std_logic lab=VDD!}
+C {lab_wire.sym} 370 -110 0 0 {name=p17 sig_type=std_logic lab=VDD!}
+C {lab_wire.sym} 20 -140 0 0 {name=p18 sig_type=std_logic lab=VDD!}
+C {lab_wire.sym} 560 -120 0 0 {name=p19 sig_type=std_logic lab=VSS!}
+C {lab_wire.sym} 20 -170 0 0 {name=p20 sig_type=std_logic lab=VSS!}
+C {lab_wire.sym} 290 -170 0 0 {name=p21 sig_type=std_logic lab=VSS!}
+C {lab_wire.sym} 20 -60 0 0 {name=p22 sig_type=std_logic lab=VSS!}
+C {lab_wire.sym} 370 -50 0 0 {name=p23 sig_type=std_logic lab=VSS!}
+C {lab_wire.sym} 560 -60 0 0 {name=p24 sig_type=std_logic lab=VDD!}

@@ -1,6 +1,6 @@
-** sch_path: /foss/designs/micron/micron_stdcells/4_nor1X.sch
-.subckt 4_nor1X A B C D Y
-*.PININFO A:I B:I C:I Y:O D:I
+** sch_path: /foss/designs/Curso_Semiconductores/4_nor1X/4_nor1X.sch
+.subckt 4_nor1X A B C D Y VDD! VSS!
+*.PININFO A:I B:I C:I Y:O D:I VDD!:B VSS!:B
 XM2 net1 A VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=2
 XM1 Y A VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
 XM5 Y B VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1

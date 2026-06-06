@@ -147,4 +147,4 @@ xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]
 }
 C {vsource.sym} 400 -60 0 0 {name=Vb1 value="pulse(0 1.8 0 0.1n 0.1n 12.5n 25n)" savecurrent=false}
 C {lab_wire.sym} 430 -90 0 0 {name=p6 sig_type=std_logic lab=C}
-C {/foss/designs/micron/micron_stdcells/3_OAI1X/3_OAI1X.sym} 490 -100 0 0 {name=x1}
+C {/foss/designs/Curso_Semiconductores/3_OAI1X/3_OAI1X.sym} 490 -100 0 0 {name=x1}

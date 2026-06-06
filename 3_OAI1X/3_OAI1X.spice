@@ -1,6 +1,6 @@
-** sch_path: /foss/designs/micron/micron_stdcells/3_OAI1X.sch
-.subckt 3_OAI1X A Y B C
-*.PININFO A:I B:I Y:O C:I
+** sch_path: /foss/designs/Curso_Semiconductores/3_OAI1X/3_OAI1X.sch
+.subckt 3_OAI1X A Y B C VDD! VSS!
+*.PININFO A:I B:I Y:O C:I VDD!:B VSS!:B
 XM1 net2 A VSS! VSS! sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1
 XM3 net2 B net1 VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1
 XM4 net3 net2 VDD! VDD! sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1

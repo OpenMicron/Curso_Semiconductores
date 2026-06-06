@@ -1,0 +1,14 @@
+** sch_path: /foss/designs/Curso_Semiconductores/RES_FB/RES_FB.sch
+.subckt RES_FB VOUT VFB VSS
+*.PININFO VOUT:B VFB:B VSS:B
+XR11 net1 VOUT VSS sky130_fd_pr__res_xhigh_po_0p69 L=8.62 mult=1
+XR1 VFB net1 VSS sky130_fd_pr__res_xhigh_po_0p69 L=8.62 mult=1
+XR2 net8 VFB VSS sky130_fd_pr__res_xhigh_po_0p69 L=8.62 mult=1
+XR3 net4 net8 VSS sky130_fd_pr__res_xhigh_po_0p69 L=8.62 mult=1
+XR4 net2 net4 VSS sky130_fd_pr__res_xhigh_po_0p69 L=8.62 mult=1
+XR5 net5 net2 VSS sky130_fd_pr__res_xhigh_po_0p69 L=8.62 mult=1
+XR6 net3 net5 VSS sky130_fd_pr__res_xhigh_po_0p69 L=8.62 mult=1
+XR7 net7 net3 VSS sky130_fd_pr__res_xhigh_po_0p69 L=8.62 mult=1
+XR8 net6 net7 VSS sky130_fd_pr__res_xhigh_po_0p69 L=8.62 mult=1
+XR9 VSS net6 VSS sky130_fd_pr__res_xhigh_po_0p69 L=8.62 mult=1
+.ends

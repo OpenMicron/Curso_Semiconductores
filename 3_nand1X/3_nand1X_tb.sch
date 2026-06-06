@@ -140,6 +140,6 @@ tclcommand="
 xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw tran
 "
 }
-C {/foss/designs/micron/micron_stdcells/3_nand1X/3_nand1X.sym} 470 -110 0 0 {name=x1}
 C {vsource.sym} 420 -80 0 0 {name=Vb1 value="pulse(0 1.8 0 0.1n 0.1n 12.5n 25n)" savecurrent=false}
 C {lab_wire.sym} 450 -110 0 0 {name=p6 sig_type=std_logic lab=C}
+C {/foss/designs/Curso_Semiconductores/3_nand1X/3_nand1X.sym} 470 -110 0 0 {name=x1}

@@ -1,0 +1,13 @@
+{
+    "technology": "",
+    "statements": [
+        {
+            "lib_name": "RES_FB",
+            "lib_path": "/foss/designs/Curso_Semiconductores/RES_FB/RES_FB.gds"
+        },
+        {
+            "lib_name": "OTA_5T",
+            "lib_path": "/foss/designs/Curso_Semiconductores/OTA_5T/OTA_5T.gds"
+        }
+    ]
+}

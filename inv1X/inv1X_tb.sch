@@ -65,4 +65,4 @@ tclcommand="
 xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw tran
 "
 }
-C {/foss/designs/micron/micron_stdcells/inv1X/inv1X.sym} -850 -190 0 0 {name=x1}
+C {/foss/designs/Curso_Semiconductores/inv1X/inv1X.sym} -850 -190 0 0 {name=x1}

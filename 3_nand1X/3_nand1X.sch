@@ -23,14 +23,14 @@ N 130 -100 130 -50 {lab=VDD!}
 N 240 -50 250 -50 {lab=VDD!}
 N 250 -100 250 -50 {lab=VDD!}
 N 240 -100 250 -100 {lab=VDD!}
-N 120 270 120 300 {lab=VSS!}
-N 120 240 130 240 {lab=VSS!}
-N 130 240 130 300 {lab=VSS!}
-N 120 300 130 300 {lab=VSS!}
-N 120 150 130 150 {lab=VSS!}
-N 130 150 130 240 {lab=VSS!}
-N 120 60 130 60 {lab=VSS!}
-N 130 60 130 150 {lab=VSS!}
+N 120 270 120 300 {lab=VDD!}
+N 120 240 130 240 {lab=VDD!}
+N 130 240 130 300 {lab=VDD!}
+N 120 300 130 300 {lab=VDD!}
+N 120 150 130 150 {lab=VDD!}
+N 130 150 130 240 {lab=VDD!}
+N 120 60 130 60 {lab=VDD!}
+N 130 60 130 150 {lab=VDD!}
 N -40 -50 -30 -50 {lab=A}
 N 70 -50 80 -50 {lab=B}
 N 190 -50 200 -50 {lab=C}
@@ -94,9 +94,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {lab_wire.sym} 120 300 0 0 {name=p1 sig_type=std_logic lab=VSS!}
-C {lab_wire.sym} 10 -100 0 0 {name=p2 sig_type=std_logic lab=VDD!
-}
 C {ipin.sym} -40 -50 0 0 {name=p3 lab=A}
 C {ipin.sym} 70 -50 0 0 {name=p4 lab=B}
 C {ipin.sym} 190 -50 0 0 {name=p5 lab=C}
@@ -135,3 +132,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
+C {iopin.sym} 250 -90 0 0 {name=p1 lab=VDD!}
+C {iopin.sym} 130 290 0 0 {name=p2 lab=VSS!}

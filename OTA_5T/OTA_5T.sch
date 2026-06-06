@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
@@ -192,7 +192,7 @@ C {iopin.sym} 1080 -780 0 0 {name=p3 lab=VOUT_AMP}
 C {iopin.sym} 320 -540 0 0 {name=p4 lab=IB}
 C {iopin.sym} 480 -720 2 0 {name=p5 lab=VINN}
 C {iopin.sym} 480 -640 2 0 {name=p6 lab=VINP}
-C {sky130_fd_pr/nfet_01v8.sym} 1460 -390 1 0 {name=D
+C {sky130_fd_pr/nfet_01v8.sym} 1460 -390 1 0 {name=M8
 W=3
 L=0.15
 nf=1 

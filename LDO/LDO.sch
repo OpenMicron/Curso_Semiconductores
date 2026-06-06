@@ -57,7 +57,7 @@ C {iopin.sym} 100 -410 2 0 {name=p2 lab=VREF}
 C {iopin.sym} 130 -200 2 0 {name=p3 lab=VFB1}
 C {iopin.sym} 100 0 2 0 {name=p4 lab=VSS}
 C {iopin.sym} 130 -165 2 0 {name=p5 lab=VFB2}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 495 -300 3 0 {name=C3 model=cap_mim_m3_1 W=10 L=10 MF=10 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 495 -300 3 0 {name=C3 model=model__cap_mim W=10 L=10 MF=1 spiceprefix=X}
 C {iopin.sym} 790 -280 0 0 {name=p6 lab=VOUT}
 C {iopin.sym} 100 -505 2 0 {name=p7 lab=IBias}
 C {lab_wire.sym} 270 -280 0 0 {name=p8 sig_type=std_logic lab=VSS}

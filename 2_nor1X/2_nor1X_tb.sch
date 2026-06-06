@@ -84,7 +84,6 @@ N 70 -100 70 -80 {lab=0}
 N -0 -120 0 -80 {lab=0}
 N -0 -80 70 -80 {lab=0}
 N 40 -80 40 -60 {lab=0}
-C {/foss/designs/micron/micron_stdcells/2_nor1X/2_nor1X.sym} 120 -160 0 0 {name=x1}
 C {vsource.sym} -160 -160 0 0 {name=V1 value=1.8 savecurrent=false}
 C {gnd.sym} -160 -110 0 0 {name=l1 lab=0}
 C {lab_wire.sym} -160 -220 0 0 {name=p1 sig_type=std_logic lab=VDD!
@@ -115,3 +114,4 @@ tclcommand="
 xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw tran
 "
 }
+C {/foss/designs/Curso_Semiconductores/2_nor1X/2_nor1X.sym} 120 -160 0 0 {name=x1}
