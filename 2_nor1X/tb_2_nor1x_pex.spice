@@ -1,0 +1,56 @@
+* Post-Layout PEX Simulation: 2-Input NOR Gate
+
+* ==========================================
+* 1. Include Device Models (SkyWater 130nm)
+* ==========================================
+* Adjust this path to point to your local pdk installation
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+* ==========================================
+* 2. Include Extracted Layout
+* ==========================================
+* This pulls in your Magic extraction and the x2_nor1X definition
+.include "2_nor1X_pex.spice"
+
+* ==========================================
+* 3. Instantiate the Extracted Subcircuit
+* ==========================================
+* Pin order MUST match your subcircuit header: A B Y VDD VSS
+X_DUT A_stim B_stim Y_out VDD! 0 x2_nor1X
+
+* ==========================================
+* 4. Power Supply & Stimulus
+* ==========================================
+* Main 1.8V power rail
+VVDD! VDD! 0 DC 1.8
+
+* Stimulus for Input A (Fast pulse)
+* PULSE(V1 V2 Tdelay Trise Tfall Ton Tperiod)
+VA A_stim 0 PULSE(0 1.8 1n 0.1n 0.1n 10n 20n)
+
+* Stimulus for Input B (Slow pulse to test all 4 logic states)
+VB B_stim 0 PULSE(0 1.8 1n 0.1n 0.1n 20n 40n)
+
+* Optional: Add a small load capacitance to the output (e.g., 5fF) 
+* to simulate driving the next logic gate
+C_load Y_out 0 5f
+
+* ==========================================
+* 5. Analysis & Control
+* ==========================================
+* Use the gear method to help the matrix solver handle the parasitic RC network
+.option method=gear chgtol=1e-15
+
+* Run a transient analysis for 100ns with a 10ps step size
+.tran 10p 100n
+
+.control
+  run
+  
+  * Plot the inputs and the output to verify NOR logic
+  plot v(A_stim) v(B_stim) v(Y_out)
+  
+  * Optional: write data to a raw file to view in a better viewer like Gaw
+  * write tb_2_nor1X_pex.raw
+.endc
+.end
