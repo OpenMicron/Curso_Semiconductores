@@ -1,0 +1,84 @@
+v {xschem version=3.4.8RC file_version=1.2}
+G {}
+K {}
+V {}
+S {}
+F {}
+E {}
+L 4 610 -530 610 -300 {}
+L 4 610 -300 675 -300 {}
+L 4 675 -305 675 -300 {}
+L 4 675 -305 700 -300 {}
+L 4 675 -290 700 -300 {}
+L 4 675 -300 675 -290 {}
+P 4 5 55 -215 160 -215 160 -150 55 -150 55 -215 {dash=4}
+T {shorted in upper
+hierarchy} 55 -145 0 0 0.4 0.4 {}
+T {max. 1mA} 675 -335 0 0 0.4 0.4 {}
+N 590 -540 590 -410 {lab=VIN}
+N 590 -380 660 -380 {lab=VIN}
+N 660 -540 660 -380 {lab=VIN}
+N 590 -350 590 -230 {lab=VOUT}
+N 150 -350 230 -350 {lab=VFB1}
+N 150 -350 150 -200 {lab=VFB1}
+N 130 -200 150 -200 {lab=VFB1}
+N 320 -540 660 -540 {lab=VIN}
+N 100 -410 230 -410 {lab=VREF}
+N 590 -280 790 -280 {lab=VOUT}
+N 590 -90 590 0 {lab=VSS}
+N 100 -0 590 0 {lab=VSS}
+N 100 -540 320 -540 {lab=VIN}
+N 130 -165 555 -165 {lab=VFB2}
+N 290 -505 290 -440 {lab=IBias}
+N 100 -505 290 -505 {lab=IBias}
+N 300 -310 300 -280 {lab=VSS}
+N 270 -280 300 -280 {lab=VSS}
+N 470 -460 470 -380 {lab=VGATE}
+N 560 -300 590 -300 {lab=VOUT}
+N 590 0 720 -0 {lab=VSS}
+N 720 -50 720 0 {lab=VSS}
+N 720 -130 720 -110 {lab=VOUT}
+N 720 -190 720 -130 {lab=VOUT}
+N 720 -280 720 -190 {lab=VOUT}
+N 420 -380 480 -380 {lab=VGATE}
+N 465 -300 500 -300 {lab=#net1}
+N 460 -460 470 -460 {lab=VGATE}
+N 540 -380 550 -380 {lab=VGATE}
+N 465 -380 465 -360 {lab=VGATE}
+N 480 -380 540 -380 {lab=VGATE}
+N 320 -540 320 -440 {lab=VIN}
+N 430 -330 445 -330 {lab=VSS}
+C {iopin.sym} 100 -540 2 0 {name=p1 lab=VIN}
+C {iopin.sym} 100 -410 2 0 {name=p2 lab=VREF}
+C {iopin.sym} 130 -200 2 0 {name=p3 lab=VFB1}
+C {iopin.sym} 100 0 2 0 {name=p4 lab=VSS}
+C {iopin.sym} 130 -165 2 0 {name=p5 lab=VFB2}
+C {iopin.sym} 790 -280 0 0 {name=p6 lab=VOUT}
+C {iopin.sym} 100 -505 2 0 {name=p7 lab=IBias}
+C {lab_wire.sym} 270 -280 0 0 {name=p8 sig_type=std_logic lab=VSS}
+C {/foss/designs/IPN/LDO_1p5V/schematics/RES_FB.sym} 590 -90 0 0 {name=x2}
+C {/foss/designs/IPN/LDO_1p5V/schematics/OTA_5T.sym} 300 -380 0 0 {name=x1}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 530 -300 3 0 {name=C3 model=cap_mim_m3_1 W=10 L=10 MF=40 spiceprefix=X}
+C {sky130_fd_pr/pfet_01v8.sym} 570 -380 0 0 {name=M7
+W=6
+L=0.15
+nf=1
+mult=50
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {lab_pin.sym} 460 -460 0 0 {name=p9 sig_type=std_logic lab=VGATE}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 720 -80 0 0 {name=C1 model=cap_mim_m3_1 W=10 L=10 MF=450 spiceprefix=X}
+C {sky130_fd_pr/res_xhigh_po.sym} 465 -330 0 0 {name=R2
+W=1
+L=5
+model=res_xhigh_po
+spiceprefix=X
+ mult=1}
+C {lab_pin.sym} 430 -330 0 0 {name=p10 sig_type=std_logic lab=VSS}
