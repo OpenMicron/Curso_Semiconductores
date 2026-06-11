@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
@@ -56,8 +56,6 @@ C {iopin.sym} 130 -165 2 0 {name=p5 lab=VFB2}
 C {iopin.sym} 790 -280 0 0 {name=p6 lab=VOUT}
 C {iopin.sym} 100 -505 2 0 {name=p7 lab=IBias}
 C {lab_wire.sym} 270 -280 0 0 {name=p8 sig_type=std_logic lab=VSS}
-C {/foss/designs/IPN/LDO_1p5V/schematics/RES_FB.sym} 590 -90 0 0 {name=x2}
-C {/foss/designs/IPN/LDO_1p5V/schematics/OTA_5T.sym} 300 -380 0 0 {name=x1}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 530 -300 3 0 {name=C3 model=cap_mim_m3_1 W=10 L=10 MF=40 spiceprefix=X}
 C {sky130_fd_pr/pfet_01v8.sym} 570 -380 0 0 {name=M7
 W=6
@@ -82,3 +80,5 @@ model=res_xhigh_po
 spiceprefix=X
  mult=1}
 C {lab_pin.sym} 430 -330 0 0 {name=p10 sig_type=std_logic lab=VSS}
+C {OTA_5T.sym} 300 -380 0 0 {name=x1}
+C {/foss/designs/Curso_Semiconductores/LDO_1p5V/schematics/RES_FB.sym} 590 -90 0 0 {name=x2}

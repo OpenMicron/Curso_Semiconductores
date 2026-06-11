@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
@@ -24,7 +24,6 @@ N 450 -570 450 -550 {lab=GND}
 N 700 -190 700 -150 {lab=VSS}
 N 700 -150 750 -150 {lab=VSS}
 N 700 -320 700 -250 {lab=VOUT}
-C {/foss/designs/IPN/LDO_1p5V/schematics/LDO.sym} 340 -130 0 0 {name=x1}
 C {gnd.sym} 590 -30 0 0 {name=l1 lab=GND}
 C {vsource.sym} 590 -80 0 0 {name=VSS value=0 savecurrent=false}
 C {lab_pin.sym} 770 -320 2 0 {name=p1 sig_type=std_logic lab=VOUT}
@@ -70,3 +69,4 @@ plot v(vout)
 C {sky130_fd_pr/corner.sym} 0 -630 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {gnd.sym} 450 -570 2 0 {name=l2 lab=GND}
 C {isource.sym} 700 -220 0 0 {name=I1 value=1m}
+C {/foss/designs/Curso_Semiconductores/LDO_1p5V/schematics/LDO_TOP.sym} 340 -130 0 0 {name=x1}
