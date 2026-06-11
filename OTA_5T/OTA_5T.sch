@@ -225,3 +225,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {lab_pin.sym} 1640 -300 0 0 {name=p11 sig_type=std_logic lab=VIN}
+C {devices/launcher.sym} 1540 -890 0 0 {name=h15
+descr="Annotate OP" 
+tclcommand="set show_hidden_texts 1; xschem annotate_op"
+}
