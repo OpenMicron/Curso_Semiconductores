@@ -1,0 +1,60 @@
+scale 1000 1 500000
+rnode "VDD.n0" 0 16.238 -232 -22 0
+rnode "VDD.t0" 0 71.9113 -94 206 0
+rnode "VDD.t1" 0 69.5916 -4 206 0
+rnode "VDD.t2" 0 69.5916 86 206 0
+rnode "VDD.t3" 0 141.503 176 206 0
+rnode "VDD!" 0 53.3535 -190 13 0
+resist "VDD.t2" "VDD.t3" 220.361
+resist "VDD.t1" "VDD.t2" 220.361
+resist "VDD.t0" "VDD.t1" 220.361
+resist "VDD!" "VDD.t0" 235.052
+resist "VDD.n0" "VDD!" 102.835
+killnode "a_n169_122#"
+rnode "a_n169_122.t1" 0 19.4439 11 206 0
+rnode "a_n169_122.n0" 0 39.4614 41 170 0
+rnode "a_n169_122.n1" 0 385.443 41 242 0
+rnode "a_n169_122.t0" 0 68.2498 -109 206 0
+rnode "a_n169_122.t3" 0 68.2498 191 206 0
+rnode "a_n169_122.t2" 0 19.4439 71 206 0
+resist "a_n169_122.n1" "a_n169_122.t0" 356.669
+resist "a_n169_122.n1" "a_n169_122.t3" 356.669
+resist "a_n169_122.n0" "a_n169_122.n1" 297.181
+resist "a_n169_122.n0" "a_n169_122.t2" 35.1786
+resist "a_n169_122.t1" "a_n169_122.n0" 35.1786
+killnode "VDD!_uq0"
+rnode "VDD!_uq0.t0" 0 20.3591 -19 206 0
+rnode "VDD!_uq0.n0" 0 62.2348 -49 242 0
+rnode "VDD!" 0 267.066 -148 406 0
+rnode "VDD!_uq0.t1" 0 20.3591 -79 206 0
+resist "VDD!" "VDD!_uq0.n0" 372.548
+resist "VDD!_uq0.n0" "VDD!_uq0.t0" 35.1786
+resist "VDD!_uq0.n0" "VDD!_uq0.t1" 35.1786
+killnode "a_101_122#"
+rnode "a_101_122.t0" 0 9.58741 161 206 0
+rnode "a_101_122.n0" 0 22.1306 131 242 0
+rnode "Y" 0 128.727 42 -103 0
+rnode "a_101_122.t1" 0 9.58741 101 206 0
+resist "a_101_122.n0" "a_101_122.t0" 35.1786
+resist "a_101_122.n0" "a_101_122.t1" 35.1786
+resist "Y" "a_101_122.n0" 336.817
+rnode "VSS.t0" 0 25.041 -19 -260 0
+rnode "VSS.t1" 0 37.0406 101 -260 0
+rnode "VSS!" 0 28.0331 -148 -434 0
+rnode "VSS.n0" 0 151.421 -49 -391 0
+resist "VSS.n0" "VSS.t1" 316.899
+resist "VSS!" "VSS.n0" 21.8483
+resist "VSS.n0" "VSS.t0" 277.175
+rnode "Y.t0" 0 5.309 11 -260 0
+rnode "Y.n0" 0 11.1319 41 -260 0
+rnode "Y" 0 209.031 42 -103 0
+rnode "Y.t1" 0 5.309 71 -260 0
+resist "Y" "Y.n0" 194.638
+resist "Y.n0" "Y.t1" 42.8571
+resist "Y.t0" "Y.n0" 42.8571
+device msubckt sky130_fd_pr__pfet_01v8 -109 122 -108 123  "VDD.t0" "B" 60 0 "a_n169_122.t0" 168 10080,456 "VDD!_uq0.t1" 168 5040,228
+device msubckt sky130_fd_pr__pfet_01v8 -19 122 -18 123  "VDD.t1" "B" 60 0 "VDD!_uq0.t0" 168 5040,228 "a_n169_122.t1" 168 5040,228
+device msubckt sky130_fd_pr__pfet_01v8 71 122 72 123  "VDD.t2" "A" 60 0 "a_n169_122.t2" 168 5040,228 "a_101_122.t1" 168 5040,228
+device msubckt sky130_fd_pr__pfet_01v8 161 122 162 123  "VDD.t3" "A" 60 0 "a_101_122.t0" 168 5040,228 "a_n169_122.t3" 168 10080,456
+device msubckt sky130_fd_pr__nfet_01v8 -19 -302 -18 -301  "VSUBS" "B" 60 0 "VSS.t0" 84 5040,288 "Y.t0" 84 2520,144
+device msubckt sky130_fd_pr__nfet_01v8 71 -302 72 -301  "VSUBS" "A" 60 0 "Y.t1" 84 2520,144 "VSS.t1" 84 5040,288

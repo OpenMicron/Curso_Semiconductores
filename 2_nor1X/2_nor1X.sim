@@ -1,0 +1,17 @@
+| units: 500000 tech: sky130A format: MIT
+x A a_n169_122# Y VDD s=5040,228 d=5040,228 l=30 w=168 x=71 y=122 sky130_fd_pr__pfet_01v8
+x A Y VSS VSUBS s=2520,144 d=5040,288 l=30 w=84 x=71 y=-301 sky130_fd_pr__nfet_01v8
+x B VDD!_uq0 a_n169_122# VDD s=5040,228 d=5040,228 l=30 w=168 x=-18 y=122 sky130_fd_pr__pfet_01v8
+x B VSS Y VSUBS s=5040,288 d=2520,144 l=30 w=84 x=-18 y=-301 sky130_fd_pr__nfet_01v8
+x B a_n169_122# VDD!_uq0 VDD s=10080,456 d=5040,228 l=30 w=168 x=-108 y=122 sky130_fd_pr__pfet_01v8
+x A Y a_n169_122# VDD s=5040,228 d=10080,456 l=30 w=168 x=161 y=122 sky130_fd_pr__pfet_01v8
+R Y 859
+= Y vias_gen_0/li_0_0#
+= Y a_101_122#
+R VSS 946
+R VDD!_uq0 740
+R a_n169_122# 2856
+R A 1767
+R B 1767
+R VDD 1337
+= VSUBS vias_gen_0/VSUBS
