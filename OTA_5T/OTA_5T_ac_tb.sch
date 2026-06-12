@@ -66,7 +66,6 @@ N 60 -150 60 -90 {lab=#net3}
 N 60 -240 60 -210 {lab=0}
 N 190 -30 260 -30 {lab=Vout}
 N 260 30 260 50 {lab=0}
-C {OTA_5T.sym} 70 -30 0 0 {name=x1}
 C {vsource.sym} -120 -30 0 0 {name=V1 value="DC 0.9 AC -0.5" savecurrent=false}
 C {vsource.sym} -30 30 0 0 {name=V2 value="DC 0.9 AC 0.5" savecurrent=false}
 C {gnd.sym} -80 80 0 0 {name=l1 lab=0}
@@ -93,3 +92,4 @@ save all
 write OTA_5T_ac_tb.raw all
 .endc
 "}
+C {/foss/designs/Curso_Semiconductores/OTA_5T/OTA_5T.sym} 70 -30 0 0 {name=x1}

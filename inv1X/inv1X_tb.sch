@@ -24,11 +24,12 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-hilight_wave=0
+hilight_wave=-1
 digital=0
 color="17 5"
 node="y
-a"}
+a"
+hcursor1_y=0.88311385}
 N -1130 -230 -1130 -200 {lab=VDD!}
 N -970 -190 -850 -190 {lab=A}
 N -730 -190 -670 -190 {lab=Y}

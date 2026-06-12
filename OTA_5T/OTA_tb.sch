@@ -19,7 +19,6 @@ N 190 -30 220 -30 {lab=#net3}
 N -52.5 -0 -0 0 {lab=#net4}
 N -45 -60 -0 -60 {lab=#net2}
 N -52.5 60 -52.5 70 {lab=0}
-C {OTA_5T.sym} 70 -30 0 0 {name=x1}
 C {vsource.sym} -190 0 0 0 {name=V1 value=1.8 savecurrent=false}
 C {vsource.sym} -115 0 0 0 {name=V2 value=0.90 savecurrent=false}
 C {isource.sym} 60 -133.3274088887357 0 0 {name=I0 value=12u}
@@ -105,3 +104,4 @@ C {ngspice_get_value.sym} 525 -55 0 0 {name=r20 node=v(@m.x1.xm6.msky130_fd_pr__
 descr="M6 vgs="}
 C {vsource.sym} -52.5 30 0 0 {name=V3 value=0.90 savecurrent=false}
 C {gnd.sym} -52.5 70 0 0 {name=l6 lab=0}
+C {/foss/designs/Curso_Semiconductores/OTA_5T/OTA_5T.sym} 70 -30 0 0 {name=x1}
